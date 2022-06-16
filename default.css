@@ -9,6 +9,10 @@
     --fourthColor:#c38bbf;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--fourthColor)
 }
@@ -59,7 +63,7 @@ nav ul li {
 nav ul li a {
     padding: 2px 10px;
     text-decoration: none;
-    color: #800080;
+    color: var(--secondColor);
     font-weight: bold;
 }
 
@@ -187,10 +191,15 @@ p span b {
 /* Responsive Layout */
 @media screen and (max-width: 62em) {
 
+    
     .container {
         width: 100%;
     }
     
+    div.logo img {
+        width: 10rem;
+    }
+
     div.konten {
         float: none;
         padding: 20px;
@@ -200,6 +209,10 @@ p span b {
 }
 
 @media screen and (max-width: 30em) {
+
+    div.logo img {
+        width: 8rem;
+    }
     
     .sub-jumbotron h1 {
         font-size: 18px;
