@@ -7,6 +7,7 @@
     --secondColor:#800080;
     --thirdColor:#ccc;
     --fourthColor:#c38bbf;
+    --fontColor:#1b0b1a;
 }
 
 html {
@@ -40,40 +41,41 @@ header {
     border-radius: 8px;
 }
 
-div.logo img {
-    width: 200px;
-    border-radius: 10px;
-    margin-top: 8px;
-    margin-bottom: 2px;
-    
+.logo {
+    padding: 10px;
 }
 
-.logo h1 {
+.logo img {
+    width: 12rem;
+    border-radius: 10px;
+}
+
+header h2 {
     font-size: 25px;
-    margin: 6px;
+    margin: 0;
+    color: var(--fontColor);
+}
+
+nav {
+    padding: 2px;
 }
 
 nav ul li {
     display: inline-block;
     position: relative;
     z-index: 2;
-    bottom: 6px;
 }
 
 nav ul li a {
-    padding: 2px 10px;
+    padding: 0 10px;
     text-decoration: none;
     color: var(--secondColor);
     font-weight: bold;
 }
 
 ul.submenu {
-    background-color: var(--mainColor);
-    border: 1px solid var(--thirdColor);
-    border-radius: 2px;
     text-align: left;
     position: absolute;
-    top:28px;
     left: 0;
     display: none;
 }
@@ -83,16 +85,19 @@ nav ul li:hover ul.submenu {
 }
 
 ul.submenu li {
-    margin: auto;
+    border: 1px solid var(--thirdColor);
+    background-color: var(--mainColor);
+    top: 15px;
+    width: 100%;
 }
 
 ul.submenu li a {
     display: block;
     padding: 0px 10px;
-    margin-top: 10px;
+    margin: 2px auto;
 }
 
-div.jumbotron {
+.jumbotron {
     width: 100%;
     padding: 80px 40px;
     box-sizing: border-box;
@@ -121,13 +126,14 @@ main {
     margin-top: 14px;
 }
 
-article.angkatan {
+.articles {
     padding: 5px;
     margin: 5px;
     text-align: justify;
+    color: var(--fontColor);
 }
 
-div.konten {
+.content {
     background-color: var(--thirdColor);
     text-align: center;
     padding: 10px;
@@ -136,11 +142,11 @@ div.konten {
     float: left;
 }
 
-div.konten img {
+.content img {
     width: 100%; 
 }
 
-div.profile {
+.profile {
     text-align: center;
     position: relative;
     top: 100px;
@@ -182,6 +188,8 @@ footer p {
     font-style: italic;
     font-size: smaller;
     padding: 25px;
+
+    color: var(--fontColor);
 }
 
 p span b {
@@ -196,11 +204,11 @@ p span b {
         width: 100%;
     }
     
-    div.logo img {
+    .logo img {
         width: 10rem;
     }
 
-    div.konten {
+    .content {
         float: none;
         padding: 20px;
         width: auto;
@@ -210,7 +218,7 @@ p span b {
 
 @media screen and (max-width: 30em) {
 
-    div.logo img {
+    .logo img {
         width: 8rem;
     }
     
@@ -222,7 +230,7 @@ p span b {
         font-size: 12px;
     }
 
-    div.konten {
+    .content {
         float: none;
         padding: 10px;
         width: auto;
